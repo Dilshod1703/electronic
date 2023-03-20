@@ -52,7 +52,7 @@ const Navbar = () => {
         <HStack>
           <Link as={ReactLink} to='/'>
             <Flex alignItems='center'>
-              <Icon as={FcMultipleDevices} h={6} w={6} color='orange.400' />
+              <Icon as={FcMultipleDevices} h={6} w={6} color='blue.400' />
               <Text fontWeight='extrabold'>Electronic</Text>
             </Flex>
           </Link>
@@ -90,7 +90,7 @@ const Navbar = () => {
             fontSize='sm'
             fontWeight={600}
             _hover={{ bg: "orange.400" }}
-            bg='orange.500'
+            bg='blue.500'
             color='white'
           >
             Sign Up

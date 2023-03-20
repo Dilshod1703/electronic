@@ -22,7 +22,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { addCartItem } from "../redux/actions/cartActions"
 
 const Rating = ({ rating, numberOfReviews }) => {
-  const { iconSize, setIconSize } = useState("14px")
+  const { iconSize} = useState("14px")
   return (
     <Flex>
       <HStack spacing='2px'>
@@ -129,7 +129,7 @@ const ProductCard = ({ product }) => {
           pt='2'
           cursor='pointer'
         >
-          <Box fontSize='2xl' fontWeight='semibold' lineHeight='tight'>
+          <Box fontSize='20px' fontWeight='semibold' lineHeight='tight'>
             {product.name}
           </Box>
         </Link>

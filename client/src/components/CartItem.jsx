@@ -1,18 +1,18 @@
+import { useDispatch } from "react-redux"
+import { addCartItem, removeCartItem } from "../redux/actions/cartActions"
 import {
-  CloseButton,
-  Select,
   Flex,
-  useColorModeValue as mode,
   Stack,
-  Image,
   Box,
   Text,
+  Image,
+  CloseButton,
+  Select,
+  useColorModeValue as mode,
 } from "@chakra-ui/react"
-import { useDispatch } from "react-redux"
-import { addCartItem } from "../redux/actions/cartActions"
 
-const CartItem = ({ CartItem }) => {
-  const { name, image, price, stock, qty, id } = CartItem
+const CartItem = ({ cartItem }) => {
+  const { name, image, price, stock, qty, id } = cartItem
   const dispatch = useDispatch()
   return (
     <Flex
@@ -31,6 +31,7 @@ const CartItem = ({ CartItem }) => {
           draggable='false'
           loading='lazy'
         />
+
         <Box pt='4'>
           <Stack spacing='0.5'>
             <Text fontWeight='medium'>{name}</Text>
@@ -59,7 +60,7 @@ const CartItem = ({ CartItem }) => {
           ))}
         </Select>
         <Text fontWeight='bold'>${price}</Text>
-        <CloseButton />
+        <CloseButton onClick={() => dispatch(removeCartItem(id))} />
       </Flex>
     </Flex>
   )
