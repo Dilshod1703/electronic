@@ -1,36 +1,14 @@
-import { useDispatch } from "react-redux"
-import { addCartItem, removeCartItem } from "../redux/actions/cartActions"
-import {
-  Flex,
-  Stack,
-  Box,
-  Text,
-  Image,
-  CloseButton,
-  Select,
-  useColorModeValue as mode,
-} from "@chakra-ui/react"
+import { useDispatch } from 'react-redux';
+import { addCartItem, removeCartItem } from '../redux/actions/cartActions';
+import { Flex, Stack, Box, Text, Image, CloseButton, Select, useColorModeValue as mode } from '@chakra-ui/react';
 
 const CartItem = ({ cartItem }) => {
-  const { name, image, price, stock, qty, id } = cartItem
-  const dispatch = useDispatch()
+  const { name, image, price, stock, qty, id } = cartItem;
+  const dispatch = useDispatch();
   return (
-    <Flex
-      direction={{ base: "column", md: "row" }}
-      justify='space-between'
-      align='center'
-    >
+    <Flex direction={{ base: 'column', md: 'row' }} justify='space-between' align='center'>
       <Stack direction='row' spacing='5' width='full'>
-        <Image
-          rounded='lg'
-          w='120px'
-          h='120px'
-          fit='cover'
-          src={image}
-          alt={name}
-          draggable='false'
-          loading='lazy'
-        />
+        <Image rounded='lg' w='120px' h='120px' fit='cover' src={image} alt={name} draggable='false' loading='lazy' />
 
         <Box pt='4'>
           <Stack spacing='0.5'>
@@ -40,17 +18,17 @@ const CartItem = ({ cartItem }) => {
       </Stack>
       <Flex
         w='full'
-        mt={{ base: "4", md: "0" }}
-        align={{ base: "center", md: "baseline" }}
+        mt={{ base: '4', md: '0' }}
+        align={{ base: 'center', md: 'baseline' }}
         justify='space-between'
         display='flex'
       >
         <Select
           maxW='64px'
-          focusBorderColor={mode("orange.500", "orange.200")}
+          focusBorderColor={mode('orange.500', 'orange.200')}
           value={qty}
           onChange={(e) => {
-            dispatch(addCartItem(id, e.target.value))
+            dispatch(addCartItem(id, e.target.value));
           }}
         >
           {[...Array(stock).keys()].map((x) => (
@@ -63,7 +41,7 @@ const CartItem = ({ cartItem }) => {
         <CloseButton onClick={() => dispatch(removeCartItem(id))} />
       </Flex>
     </Flex>
-  )
-}
+  );
+};
 
-export default CartItem
+export default CartItem;

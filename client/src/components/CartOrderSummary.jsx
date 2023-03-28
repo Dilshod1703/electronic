@@ -1,39 +1,31 @@
-import {
-  Button,
-  Flex,
-  Stack,
-  Text,
-  useColorModeValue as mode,
-  Badge,
-  Heading,
-} from "@chakra-ui/react"
-import { useState } from "react"
-import { FaArrowRight } from "react-icons/fa"
-import { useSelector } from "react-redux"
-import { Link as ReactLink, useNavigate } from "react-router-dom"
+import { Button, Flex, Stack, Text, useColorModeValue as mode, Badge, Heading } from '@chakra-ui/react';
+import { useState } from 'react';
+import { FaArrowRight } from 'react-icons/fa';
+import { useSelector } from 'react-redux';
+import { Link as ReactLink, useNavigate } from 'react-router-dom';
 
 const CartOrderSummary = () => {
-  const [buttonLoading, setButtonLoading] = useState()
-  const standardShipping = Number(4.99).toFixed(2)
-  const cartItems = useSelector((state) => state.cart)
-  const { subtotal } = cartItems
-  const navigate = useNavigate
+  const [buttonLoading, setButtonLoading] = useState();
+  const standardShipping = Number(4.99).toFixed(2);
+  const cartItems = useSelector((state) => state.cart);
+  const { subtotal } = cartItems;
+  const navigate = useNavigate;
   const checkoutHandler = () => {
-    setButtonLoading(true)
-    navigate("/checkout")
-  }
+    setButtonLoading(true);
+    navigate('/checkout');
+  };
   return (
     <Stack spacing='8' borderWidth='1px' rounded='lg' padding='8' w='full'>
       <Heading size='md'>Order Summary</Heading>
       <Stack spacing='6'>
         <Flex justify='space-between'>
-          <Text fontWeight='medium' color={mode("gray.600", "gray.400")}>
+          <Text fontWeight='medium' color={mode('gray.600', 'gray.400')}>
             Subtotal
           </Text>
           <Text fontWeight='medium'>${subtotal}</Text>
         </Flex>
         <Flex justify='space-between'>
-          <Text fontWeight='medium' color={mode("gray.600", "gray.400")}>
+          <Text fontWeight='medium' color={mode('gray.600', 'gray.400')}>
             Shipping
           </Text>
           <Text fontWeight='medium'>
@@ -50,9 +42,8 @@ const CartOrderSummary = () => {
           <Text fontSize='xl' fontWeight='medium'>
             Total
           </Text>
-          <Text fontWeight='medium' fontSize='xl'>${subtotal <= 1000
-              ? Number(subtotal) + Number(standardShipping)
-              : subtotal}
+          <Text fontWeight='medium' fontSize='xl'>
+            ${subtotal <= 1000 ? Number(subtotal) + Number(standardShipping) : subtotal}
           </Text>
         </Flex>
       </Stack>
@@ -69,7 +60,7 @@ const CartOrderSummary = () => {
         Checkout
       </Button>
     </Stack>
-  )
-}
+  );
+};
 
-export default CartOrderSummary
+export default CartOrderSummary;
