@@ -82,7 +82,7 @@ const Navbar = () => {
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize='sm'
             fontWeight={600}
-            _hover={{ bg: 'orange.400' }}
+            _hover={{ bg: 'blue.400' }}
             bg='blue.500'
             color='white'
           >
