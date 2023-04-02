@@ -2,7 +2,7 @@ import { FormControl, FormErrorMessage, FormLabel } from '@chakra-ui/form-contro
 import { Input } from '@chakra-ui/input';
 import { Field, useField } from 'formik';
 
-const TextField = (label, type, name, placeholder) => {
+const TextField = ({label, type, name, placeholder}) => {
   const [field, meta] = useField({ type, name, placeholder });
 
   return (
