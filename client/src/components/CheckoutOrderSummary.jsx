@@ -108,7 +108,7 @@ import {
             <Text fontSize='lg' fontWeight='semibold'>
               Total
             </Text>
-            <Text fontSize='xl' fontWeight='extrabold'>
+            <Text fontSize='xl' fontWeight='semibold'>
               ${Number(total())}
             </Text>
           </Flex>
@@ -121,7 +121,7 @@ import {
         />
         <Box align='center'>
           <Text fontSize='sm'>Have questions? or need help to complete your order?</Text>
-          <Flex justifyContent='center' color={mode('orange.500', 'orange.100')}>
+          <Flex justifyContent='center' color={mode('blue.500', 'blue.100')}>
             <Flex align='center'>
               <ChatIcon />
               <Text m='2'>Live Chat</Text>

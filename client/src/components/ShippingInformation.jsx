@@ -52,7 +52,7 @@ const ShippingInformation = () => {
             <TextField name='country' placeholder='Country' label='Country' />
           </FormControl>
           <Box w='100%' h='180px' pr='5'>
-            <Heading fontSize='2xl' fontWeight='extrabold' mb='10'>
+            <Heading fontSize='2xl' fontWeight='semibold' mb='10'>
               Shipping Method
             </Heading>
             <RadioGroup

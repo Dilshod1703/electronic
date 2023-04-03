@@ -93,7 +93,7 @@ const ProductTableItem = ({ product }) => {
               <DeleteIcon mr='5px' />
               Remove Product
             </Button>
-            <Button colorScheme='orange' w='160px' variant='outline' onClick={onSaveProduct}>
+            <Button colorScheme='blue' w='160px' variant='outline' onClick={onSaveProduct}>
               <MdOutlineDataSaverOn style={{ marginRight: '5px' }} />
               Save Changes
             </Button>

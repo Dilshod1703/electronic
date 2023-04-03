@@ -84,7 +84,7 @@ const AddNewProduct = () => {
       </Td>
       <Td>
         <VStack>
-          <Button variant='outline' w='160px' colorScheme='orange' onClick={() => createNewProduct()}>
+          <Button variant='outline' w='160px' colorScheme='blue' onClick={() => createNewProduct()}>
             <MdDriveFolderUpload />
             <Text ml='2'>Save Product</Text>
           </Button>

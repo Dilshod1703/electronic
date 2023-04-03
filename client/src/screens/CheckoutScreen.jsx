@@ -18,7 +18,7 @@ const CheckoutScreen = () => {
       py={{ base: '6', md: '8', lg: '12' }}>
       <Stack direction={{ base: 'column', lg: 'row' }} align={{ lg: 'flex-start' }}>
         <Stack spacing={{ base: '8', md: '10' }} flex='1.5' mb={{ base: '12', md: 'none' }}>
-          <Heading fontSize='2xl' fontWeight='extrabold'>
+          <Heading fontSize='2xl' fontWeight='semibold'>
             Shipping Information
           </Heading>
           <Stack spacing='6'>

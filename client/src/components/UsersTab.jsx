@@ -60,7 +60,7 @@ import {
         {loading ? (
           <Wrap justify='center'>
             <Stack direction='row' spacing='4'>
-              <Spinner mt='20' thickness='2px' speed='0.65s' emptyColor='gray.200' color='orange.500' size='xl' />
+              <Spinner mt='20' thickness='2px' speed='0.65s' emptyColor='gray.200' color='blue.500' size='xl' />
             </Stack>
           </Wrap>
         ) : (
@@ -85,7 +85,7 @@ import {
                         </Td>
                         <Td>{user.email}</Td>
                         <Td>{new Date(user.createdAt).toDateString()}</Td>
-                        <Td>{user.isAdmin === 'true' ? <CheckCircleIcon color='orange.500' /> : ''}</Td>
+                        <Td>{user.isAdmin === 'true' ? <CheckCircleIcon color='blue.500' /> : ''}</Td>
                         <Td>
                           <Button
                             disabled={user._id === userInfo._id}

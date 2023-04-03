@@ -82,7 +82,7 @@ const ProductScreen = () => {
     <Wrap spacing='30px' justify='center' minHeight='100vh'>
       {loading ? (
         <Stack direction='row' spacing={4}>
-          <Spinner mt={20} thickness='2px' speed='0.65s' emptyColor='gray.200' color='orange.500' size='xl' />
+          <Spinner mt={20} thickness='2px' speed='0.65s' emptyColor='gray.200' color='blue.500' size='xl' />
         </Stack>
       ) : error ? (
         <Alert status='error'>
@@ -113,7 +113,7 @@ const ProductScreen = () => {
                     Sold out
                   </Badge>
                 )}
-                <Heading fontSize='2xl' fontWeight='extrabold'>
+                <Heading fontSize='2xl' fontWeight='semibold'>
                   {product.name}
                 </Heading>
                 <Stack spacing='5'>
@@ -135,15 +135,15 @@ const ProductScreen = () => {
                   <Text>{product.description}</Text>
                   <Text fontWeight={'bold'}>Quantity</Text>
                   <Flex w='170px' p='5px' border='1px' borderColor='gray.200' alignItems='center'>
-                    <Button disabled={amount <= 1} onClick={() => changeAmount('minus')}>
+                    <Button isDisabled={amount <= 1} onClick={() => changeAmount('minus')}>
                       <MinusIcon />
                     </Button>
                     <Text mx='30px'>{amount}</Text>
-                    <Button disabled={amount >= product.stock} onClick={() => changeAmount('plus')}>
+                    <Button isDisabled={amount >= product.stock} onClick={() => changeAmount('plus')}>
                       <SmallAddIcon w='20px' h='25px' />
                     </Button>
                   </Flex>
-                  <Button disabled={product.stock === 0} colorScheme='orange' onClick={() => addItem()}>
+                  <Button isDisabled={product.stock === 0} colorScheme='blue' onClick={() => addItem()}>
                     Add to cart
                   </Button>
                   <Stack width='270px'>
@@ -179,7 +179,7 @@ const ProductScreen = () => {
                     disabled={hasUserReviewed()}
                     my='20px'
                     w='140px'
-                    colorScheme='orange'
+                    colorScheme='blue'
                     onClick={() => setReviewBoxOpen(!reviewBoxOpen)}>
                     Write a review
                   </Button>
@@ -217,7 +217,7 @@ const ProductScreen = () => {
                       }}
                       placeholder={`The ${product.name} is...`}
                     />
-                    <Button w='140px' colorScheme='orange' onClick={() => onSubmit()}>
+                    <Button w='140px' colorScheme='blue' onClick={() => onSubmit()}>
                       Publish review
                     </Button>
                   </Stack>
