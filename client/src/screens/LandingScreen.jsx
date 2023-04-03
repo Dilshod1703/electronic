@@ -36,7 +36,7 @@ const LandingScreen = () => (
             </Flex>
 
             <Heading size='xl' fontWeight='normal'>
-              Udate your devices
+              Update your devices
             </Heading>
           </Stack>
           <HStack spacing='3'>
